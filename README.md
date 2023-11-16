@@ -37,6 +37,20 @@
 ### •	Se analizarán los diferentes parámetros a tener en cuenta en el modelo, así como los diferentes métodos para calcular su error estimado, con el objetivo de elegir el mejor modelo aplicado.
 
 ### •	Se presentaron los resultados del modelo elegido desde la analítica.
+## DESARROLLO DE MODELADO
+### El desarrollo se realizo por modulos existiendo 3 modulos:
+
+### •  Modulo de lectura y analisis de datos: El archivo cleannig_datanb.ipynb se realiza una lectura de los archivos csv con ayuda de la libreria glob, los cuales son concatenados con ayuda de la libreria de pandas. Posteriormente se realiza un reemplazo de datos erroneos y una conversion a tipo fecha a los campos fecha entrega, fecha ultima, fecha penultima y fecha antepenultima; finalmnete se realiza una exploraciomn de los datos.
+### Este modulo fue convertido en un archivo .py para poder ser consumidos desde los otros 2 modulos.
+
+### •  Modulo del Perceptron: En el archivo perceptron.ipynb se desarrollo el modelo predictivo de un perceptron simple, inicialmente consumiendo los datos desde el modulo de cleannig_data y posteriormente realizando el escalamiento y transformaciones necesarias para que todos nlos datos quedaran tipo numerico. Con ayuda de modulos como datetime, ColumnTransformer y StandardScaler. Posteriormente, realizando una division de los datos para entrenamiento y prueba con ayuda de la funcion train_test_split. Se desarrolla el Perceptron desde el modulo de linear_model con los datos de entrenamiento, finalizando con el desarrollo de una matriz de confusion, con los datos de prueba ayudado por modulos como metrics y pyplot.
+
+### •  Modulo de Maquina de Soporte Vectorial : En el archivo soporte_vectorial.ipynb se desarrollo el modelo predictivo de una Maquina de Soporte Vectorial, inicialmente consumiendo los datos desde el modulo de cleannig_data y posteriormente realizando el escalamiento y transformaciones necesarias para que todos nlos datos quedaran tipo numerico. Con ayuda de modulos como datetime, ColumnTransformer y StandardScaler. Posteriormente, realizando una division de los datos para entrenamiento y prueba con ayuda de la funcion train_test_split. Se desarrolla la Maquina de Soporte Vectorial desde el modulo de svm con los datos de entrenamiento, finalizando con el desarrollo de una matriz de confusion, con los datos de prueba ayudado por modulos como metrics y pyplot.
+
+## CONCLUSIONES
+### • Se evidencia la necesidad de tener una buena calidad en los datos, para ptener una mejor score en los modelos predictivos
+### • 
+### • 
 
 ## TRABAJOS FUTUROS
 
@@ -50,6 +64,9 @@
 
 ### •	Herramientas tecnológicas: Python, GitHub.
 ### •	Modelos de Analítica predictiva
+
+## REFERENCIAS
+### • Juan D. Velasquez 2019-2021,Curso de Analitica y Maching Learning. https://jdvelasq.github.io/courses/index.html
 
 # SELECCION DEL DATASET
 ### Los datos recolectados corresponden a información extraída de 6 diferentes concesionarios de Colombia, basados en sus históricos de entregas, e ingresos al taller.
@@ -69,7 +86,7 @@
 
 ### •	Kilometraje reportado en el antepenúltimo ingreso: Corresponde a la cantidad de kilómetros registrados en el Odómetro del vehículo en su antepenúltimo ingreso al taller. Si este nunca ha ingresado más de tres veces al taller, este valor será cero.
 
-### •	Número de días/ 5000 kilómetros: Corresponde a la cantidad de días, en los cuales el vehículo alcanza a recorrer 5000 kilómetros. Como mínimo tiene un valor de 15 días y como máximo 180 días (6 meses).
+### •	Ingreso al taller en el mes en curso: Corresponde a un valor binario siendo 1 que el vehiculo ingreso a los talleres del consecionario en el mes en cuerso, siendo 0 lo contrario.
 
 ### Cada uno de los 6 paquetes de información, fueron extraídos desde las bases de datos SQL de los concesionarios a archivos CSV, los cuales fueron concatenados, transformados y limpiados por medio de lenguaje Python.
 
@@ -79,4 +96,21 @@
 
 ### En los talleres del sector automotriz se sufren falencias ya que los ingresos de los vehículos aun poseen la necesidad de tener una proyección de entradas por lapsos de tiempo más largos, ya que actualmente se está en la modalidad de citas y es a muy corto plazo. Contando actualmente con proyecciones en algoritmos tradicionales, los cuales no poseen la habilidad de procesar grandes volúmenes de datos al mismo tiempo, también herramientas de proyección muy empíricas y por juicios de expertos que aún no cuentan con la suficiente habilidad de prever una cifra más exacta.
 
-### Si la proyección existiera, con ésta se podría poseer un valor estimado de entradas y valor monetario por un periodo de tiempo definido más exacto, prever campañas comerciales o promocionales a sus próximos ingresos, tener con antelación repuestos y recursos necesarios para las próximas entradas, prever caídas en ingresos, para planear contingencias y saber con antelación si se logrará las metas propuestas por las marcas y distribuidoras a quienes deben cumplir para continuar con la concesión y la gerencia de los concesionarios puedan tomar con antelación decisiones para maximizar sus ganancias
+### Si la proyección existiera, con ésta se podría poseer un valor estimado de entradas y valor monetario por un periodo de tiempo definido más exacto, prever campañas comerciales o promocionales a sus próximos ingresos, tener con antelación repuestos y recursos necesarios para las próximas entradas, prever caídas en ingresos, para planear contingencias y saber con antelación si se logrará las metas propuestas por las marcas y distribuidoras a quienes deben cumplir para continuar con la concesión y la gerencia de los concesionarios puedan tomar con antelación decisiones para maximizar sus ganancias.
+
+# MODELOS ANALITICOS
+### Se considero que la prediccion era categorica y por ende se seleccionaron dos modelos predictivos de clasificacion: 
+
+### • Perceptron Simple: Para este modelo se tuvieron en cuenta los siguientes parametros: sin penalizacion, alfa= 0,0001 , red elastica= 0.9 , intercepto de entrenamiento, maximo de iteracciones = 100000, tolerancia = 0.001 , constante de multiplicidad = 1 , earling stopping = true , mezcla de datos de entrenamiento y teniendo en cuenta resultados anteriores. 
+
+### • Maquina de Soporte Vectorial: Para este modelo se tuvieron en cuenta los siguientes parametros: Kernel= lineal , parametro de regularizacion = 1 , gama =  escalado , tolerancia = 0.001 , forma de decision de la funcion = ovr. 
+
+# ENTRENAMIENTO Y VALIDACION DE LOS MODELOS PREDICTIVOS
+### Los modelos seleccionados fueron entrenados y posteriormente validados a gtraves de Matriz de Confusion.
+### • Perceptron Simple: El entrenamiento del modelo arrojo como resultado un score de 52%......
+### • Maquina de Soporte Vectorial: El entrenamiento del modelo arrojo como resultado un score de 54%......
+
+# SELECCION DEL MEJOR MODELO: Se selecciona el modelo de Maquina de Soporte Vectorial, porque tiene un score de 54%......
+
+# APLICAION DEL MODELO A LA GESTION DE CONOCIMIENTO
+
