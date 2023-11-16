@@ -48,9 +48,9 @@
 ### •  Modulo de Maquina de Soporte Vectorial : En el archivo soporte_vectorial.ipynb se desarrollo el modelo predictivo de una Maquina de Soporte Vectorial, inicialmente consumiendo los datos desde el modulo de cleannig_data y posteriormente realizando el escalamiento y transformaciones necesarias para que todos nlos datos quedaran tipo numerico. Con ayuda de modulos como datetime, ColumnTransformer y StandardScaler. Posteriormente, realizando una division de los datos para entrenamiento y prueba con ayuda de la funcion train_test_split. Se desarrolla la Maquina de Soporte Vectorial desde el modulo de svm con los datos de entrenamiento, finalizando con el desarrollo de una matriz de confusion, con los datos de prueba ayudado por modulos como metrics y pyplot.
 
 ## CONCLUSIONES
-### • Se evidencia la necesidad de tener una buena calidad en los datos, para ptener una mejor score en los modelos predictivos
-### • 
-### • 
+### • Se destaca la importancia de contar con datos de alta calidad para obtener resultados precisos en los modelos predictivos. La fase de limpieza de datos fue crucial para garantizar la validez y confiabilidad de los resultados, evidenciando que la calidad de los datos influye directamente en el rendimiento de los modelos.
+### • A través del proceso de desarrollo y validación de modelos, se concluyó que la Máquina de Soporte Vectorial superó al Perceptrón Simple en términos de rendimiento, alcanzando un score del 54%. Esta elección se basó en una cuidadosa evaluación de parámetros y análisis de la matriz de confusión. La correcta selección del modelo es esencial para lograr predicciones precisas.
+### • Se identificó la aplicabilidad práctica de la analítica predictiva en la gestión del conocimiento en el sector automotriz. La capacidad de prever si un vehiculo debe o no ingresar en el mes en curso ofrece ventajas estratégicas, como la planificación anticipada de recursos, la optimización de ingresos y la toma de decisiones informada. Este proyecto sienta las bases para futuras predicciones y contribuye al desarrollo de herramientas predictivas más complejas.
 
 ## TRABAJOS FUTUROS
 
@@ -107,10 +107,28 @@
 
 # ENTRENAMIENTO Y VALIDACION DE LOS MODELOS PREDICTIVOS
 ### Los modelos seleccionados fueron entrenados y posteriormente validados a gtraves de Matriz de Confusion.
-### • Perceptron Simple: El entrenamiento del modelo arrojo como resultado un score de 52%......
-### • Maquina de Soporte Vectorial: El entrenamiento del modelo arrojo como resultado un score de 54%......
+### • Perceptron Simple: El entrenamiento del modelo arrojo como resultado un score de 52%, Se destaca que el procesamiento de este modelo es rapido y eficiente, no tomando mas de 15 minutos en su generacion. 
+### En cuanto a la matriz de confusion de los resultados se destaca una diagonal ideal con gran cantidad de aciertos pero tambien la diagonal inversa con bastante distribucion de los datos.
+### Arrojando como resultado una sensibilidad de 70% y una especificidad de 30%
+### Con una probabilidad de acertar un 0 de 54% y una probabilidad de acertar un 1 de 45%
 
-# SELECCION DEL MEJOR MODELO: Se selecciona el modelo de Maquina de Soporte Vectorial, porque tiene un score de 54%......
+### • Maquina de Soporte Vectorial: El entrenamiento del modelo arrojo como resultado un score de 54%,Se destaca que el procesamiento anque es el mejor prediciendo es lento, tardando aproximadamente hora y media para arrojar resultados.
+### En cuanto a la matriz de confusion de los resultados se destaca una diagonal ideal sinaciertos en el valor 1. centrandose la mayoria de los datos en la clasificacion de 0.
+### Arrojando como resultado una sensibilidad de 99% y una especificidad de 0%
+### Con una probabilidad de acertar un 0 de 54% y una probabilidad de acertar un 1 de 0%
+
+# SELECCION DEL MEJOR MODELO:
+### La elección de la Máquina de Soporte Vectorial (SVM) sobre el Perceptrón Simple se basa en varios criterios clave derivados del proceso de desarrollo, entrenamiento y validación de los modelos predictivos.
+### • La SVM demostró un rendimiento superior, alcanzando un score del 54%, en comparación con el Perceptrón Simple, que obtuvo un score del 52%. Un score más alto indica una capacidad de predicción más efectiva.
+### • La sensibilidad del 99% en la SVM destaca su habilidad para identificar correctamente los casos positivos, mientras que la especificidad del 0% indica una limitación en la identificación de los casos negativos.
+### • A pesar de que el entrenamiento de la SVM puede ser más lento en comparación con el Perceptrón Simple, el proyecto prioriza la precisión sobre la velocidad. La SVM aún ofrece un tiempo de procesamiento razonable, siendo la elección práctica.
 
 # APLICAION DEL MODELO A LA GESTION DE CONOCIMIENTO
+### La implementación del modelo de Máquina de Soporte Vectorial (SVM) en la gestión del conocimiento tiene un impacto significativo en el desempeño tanto organizacional como humano en el sector automotriz. A continuación, se detallan los aspectos clave de este impacto:
+### • Los talleres pueden anticipar la demanda de servicios y ajustar la asignación de personal y la gestión de inventario de manera óptima.
+### • Los empleados se benefician al contar con una carga de trabajo más predecible y gestionable. 
+### • Permite una mejor programación de citas, reduciendo los tiempos de espera para los clientes y mejorando la eficiencia operativa del taller. 
+### • Los empleados pueden brindar un servicio más eficiente y personalizado, aumentando la satisfacción del cliente y generando lealtad.
+### • La gerencia puede anticipar tendencias, identificar oportunidades de crecimiento y tomar decisiones informadas para alcanzar los objetivos organizacionales.
+### • La planificación financiera se vuelve más precisa y realista.
 
