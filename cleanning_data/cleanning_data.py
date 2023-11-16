@@ -20,5 +20,4 @@ df.replace('0000-00-00', '1900-01-01', inplace=True)
 df['fecha_entrega'] = pd.to_datetime(df['fecha_entrega'], errors='coerce')
 df['fecha_ultima'] = pd.to_datetime(df['fecha_ultima'], errors='coerce')
 df['fecha_penultima'] = pd.to_datetime(df['fecha_penultima'], errors='coerce')
-df['fecha_antepenultima'] = pd.to_datetime(
-    df['fecha_antepenultima'], errors='coerce')
+df['fecha_antepenultima'] = pd.to_datetime(df['fecha_antepenultima'], errors='coerce')
