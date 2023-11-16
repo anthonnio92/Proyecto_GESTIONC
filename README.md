@@ -123,7 +123,7 @@
 ### • La sensibilidad del 99% en la SVM destaca su habilidad para identificar correctamente los casos positivos, mientras que la especificidad del 0% indica una limitación en la identificación de los casos negativos.
 ### • A pesar de que el entrenamiento de la SVM puede ser más lento en comparación con el Perceptrón Simple, el proyecto prioriza la precisión sobre la velocidad. La SVM aún ofrece un tiempo de procesamiento razonable, siendo la elección práctica.
 
-# APLICAION DEL MODELO A LA GESTION DE CONOCIMIENTO
+# APLICACION DEL MODELO A LA GESTION DE CONOCIMIENTO
 ### La implementación del modelo de Máquina de Soporte Vectorial (SVM) en la gestión del conocimiento tiene un impacto significativo en el desempeño tanto organizacional como humano en el sector automotriz. A continuación, se detallan los aspectos clave de este impacto:
 ### • Los talleres pueden anticipar la demanda de servicios y ajustar la asignación de personal y la gestión de inventario de manera óptima.
 ### • Los empleados se benefician al contar con una carga de trabajo más predecible y gestionable. 
