@@ -131,3 +131,4 @@
 ### • Los empleados pueden brindar un servicio más eficiente y personalizado, aumentando la satisfacción del cliente y generando lealtad.
 ### • La gerencia puede anticipar tendencias, identificar oportunidades de crecimiento y tomar decisiones informadas para alcanzar los objetivos organizacionales.
 ### • La planificación financiera se vuelve más precisa y realista.
+
